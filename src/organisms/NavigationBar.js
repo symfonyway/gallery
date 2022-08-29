@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Chevron from '../molecules/Chevron';
+import useKeyPress from '../hooks/useKeyPress';
 
 function NavigationBar({ currImg, images, setGlobalCurrentImage }) {
 	const findNearestPositions = (images, newCurrImg) => {
@@ -65,6 +66,17 @@ function NavigationBar({ currImg, images, setGlobalCurrentImage }) {
 		}
 		setShowedPictures(baseImages);
 	};
+
+	const arrowLeftPressed = useKeyPress('ArrowLeft');
+	const arrowRightPressed = useKeyPress('ArrowRight');
+
+	useEffect(() => {
+		if (arrowLeftPressed) switchPictureRight(false);
+	}, [arrowLeftPressed]);
+
+	useEffect(() => {
+		if (arrowRightPressed) switchPictureRight(true);
+	}, [arrowRightPressed]);
 
 	useEffect(() => {
 		const indexOfImg = showedPictures.findIndex((img) => currImg === img);
