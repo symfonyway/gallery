@@ -2,29 +2,31 @@ import { useState, useEffect } from 'react';
 import Chevron from '../molecules/Chevron';
 
 function NavigationBar({ currImg, images, setGlobalCurrentImage }) {
-	const findNearestPositions = (images, newCurrImg, isEdge) => {
+	const findNearestPositions = (images, newCurrImg) => {
 		const index = images.findIndex((img) => img === newCurrImg);
 
-		if (isEdge) {
-			if (index === images.length - 1) {
-				setCurrentIndexImage(1);
-				return setShowedPictures([
-					images[images.length - 2],
-					images[index],
-					images[0],
-				]);
-			} else if (index === 0) {
-				setCurrentIndexImage(1);
-				return setShowedPictures(
-					images[images.length - 1],
-					images[index],
-					images[1]
-				);
-			}
+		if (index === images.length - 1) {
+			setCurrentIndexImage(1);
+			return setShowedPictures([
+				images[images.length - 2],
+				images[index],
+				images[0],
+			]);
+		} else if (index === 0) {
+			setCurrentIndexImage(1);
+			return setShowedPictures([
+				images[images.length - 1],
+				images[index],
+				images[1],
+			]);
 		}
 
 		setCurrentIndexImage(1);
-		return [images[index - 1], images[index], images[index + 1]];
+		return setShowedPictures([
+			images[index - 1],
+			images[index],
+			images[index + 1],
+		]);
 	};
 
 	const [showedPictures, setShowedPictures] = useState(images.slice(0, 3));
@@ -36,15 +38,11 @@ function NavigationBar({ currImg, images, setGlobalCurrentImage }) {
 		let baseImages = [...showedPictures];
 		if (isRight) {
 			if (currentIndexImage === 2) {
-				// baseImages = baseImages.splice(1).concat(baseImages);
-				// проверка на пространство
 				const index = images.findIndex((img) => img === currImg);
 
 				if (index === images.length - 1) {
 					setGlobalCurrentImage(images[0]);
-					// baseImages = [images[images.length - 1], images[0], images[1]];
 				} else {
-					// baseImages = [images[index - 1], images[index], images[index + 1]];
 					setGlobalCurrentImage(images[index + 1]);
 				}
 			} else {
@@ -53,7 +51,13 @@ function NavigationBar({ currImg, images, setGlobalCurrentImage }) {
 			}
 		} else {
 			if (currentIndexImage === 0) {
-				// baseImages = baseImages.splice(-1, 1).concat(baseImages);
+				const index = images.findIndex((img) => img === currImg);
+
+				if (index === 0) {
+					setGlobalCurrentImage(images[images.length - 1]);
+				} else {
+					setGlobalCurrentImage(images[index - 1]);
+				}
 			} else {
 				setCurrentIndexImage(currentIndexImage - 1);
 				setGlobalCurrentImage(baseImages[currentIndexImage - 1]);
