@@ -1,5 +1,7 @@
 .gallery {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   background: #000000ad;
   width: 100%;
   height: 100%;
@@ -101,12 +103,17 @@
     align-items: center;
     cursor: pointer;
     position: absolute;
-    right: 12px;
+    right: 64px;
     top: 12px;
 
     img {
       width: 25px;
       height: 25px;
+    }
+
+    &_close {
+      right: 12px;
+      border-radius: 100px;
     }
   }
 
