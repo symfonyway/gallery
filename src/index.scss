@@ -54,6 +54,7 @@
       align-items: center;
       display: flex;
       justify-content: center;
+
       img {
         max-width: 100%;
         width: auto;
@@ -149,6 +150,7 @@
       border: 2px solid aliceblue;
     }
   }
+
   .-activeLi {
     cursor: default;
     box-sizing: border-box;

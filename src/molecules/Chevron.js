@@ -13,7 +13,8 @@ function Chevron({direction, onClick}) {
         case 'bottom':
             direct = {transform: 'rotate(90deg)'};
             break
-        default: break;
+        default:
+            break;
     }
 
     return (
