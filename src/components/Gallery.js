@@ -4,6 +4,8 @@ import ExpandGalleryBtn from '../organisms/ExpandGalleryBtn';
 import GalleryTab from '../organisms/GalleryTab';
 import cross from "../icons/cross_lightgray.svg";
 
+import "../styles/gallery.scss"
+
 function Gallery({images, closeGallery}) {
     const [currentImage, setGlobalCurrentImage] = useState(images ? images[0] : null);
     const [isOpenTab, setIsOpenTab] = useState(false);
