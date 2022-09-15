@@ -1,6 +1,35 @@
-# Getting Started with Create React App
+# Simple react gallery component
+## Description
+This component helps users for viewing pictures.\
+It makes a lightbox with simple navigation menu and expandable panel with pictures.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Steps: \
+1.[Installing](#installing) \
+2.[Using](#using) \
+3.[Editing](#editing)
+
+<a id="installing"></a>
+## Installing
+<a id="using"></a>
+## Using
+This component don't use additional external dependencies, \
+you just need to import component from /components/Gallery, \
+use this component in your code.
+
+### Props
+#### images
+This prop needs array of images or null value. \
+For correct work array need to include minimum one picture in other way you will see the empty lighbox. \
+You can push in array both types of pictures url and imported pictures from your structure. \
+Null is value for switching off component.
+
+#### 
+
+### Example of using
+
+
+<a id="editing"></a>
+## Editing
 
 ## Available Scripts
 

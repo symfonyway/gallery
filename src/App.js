@@ -15,14 +15,14 @@ function App() {
         'https://i.pinimg.com/564x/85/c2/d8/85c2d8207fdf3dd4283bf90f7b13edce.jpg',
         'https://i.pinimg.com/564x/b9/2c/55/b92c5560709fc3b68a9c82873804a3a4.jpg',
         'https://i.pinimg.com/564x/be/e3/6a/bee36a66c7c9afec3acb29e8feabbad8.jpg'
-    ]
+    ];
 
     const [currentImages, setCurrentImages] = useState(null);
     return (
         <div>
             <button onClick={() => setCurrentImages(images)}>Gallery</button>
             <button onClick={() => setCurrentImages(tattoos)}>Tattoos</button>
-            {currentImages && <Gallery closeGallery={() => setCurrentImages(null)} images={currentImages}/>}
+            <Gallery closeGallery={() => setCurrentImages(null)} images={currentImages}/>
         </div>
     );
 }

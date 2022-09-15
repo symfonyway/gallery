@@ -21,6 +21,9 @@ function NavigationBar({currImg, images, setGlobalCurrentImage}) {
                 images[1],
             ]);
         }
+        else if (index === -1) {
+            return [];
+        }
 
         setCurrentIndexImage(1);
         return setShowedPictures([
