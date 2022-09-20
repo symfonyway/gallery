@@ -1,11 +1,11 @@
 import {useState} from 'react';
-import Gallery from "./components/Gallery";
-import img1 from './images/1.jpg';
-import img2 from './images/2.jpg';
-import img3 from './images/3.jpg';
-import img4 from './images/4.jpg';
-import img5 from './images/5.jpg';
-import img6 from './images/6.jpg';
+import Gallery from "pet-react-lightbox-gallery";
+import img1 from './lib/images/1.jpg';
+import img2 from './lib/images/2.jpg';
+import img3 from './lib/images/3.jpg';
+import img4 from './lib/images/4.jpg';
+import img5 from './lib/images/5.jpg';
+import img6 from './lib/images/6.jpg';
 
 function App() {
     const images = [img1, img2, img3, img4, img5, img6];
