@@ -78,6 +78,11 @@
     justify-content: center;
     align-items: center;
 }
+
+.gallery__chevron img {
+    width: 40px;
+}
+
 .gallery__chevron:hover {
     background: lightblue;
 }

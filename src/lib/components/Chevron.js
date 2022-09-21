@@ -1,4 +1,4 @@
-import chevron from "../icons/chevron.svg"
+import chevron from "../icons/chevron.png"
 import React from 'react';
 import ReactDOM from 'react-dom';
 

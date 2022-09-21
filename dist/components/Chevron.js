@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _chevron = _interopRequireDefault(require("../icons/chevron.svg"));
+var _chevron = _interopRequireDefault(require("../icons/chevron.png"));
 
 var _react = _interopRequireDefault(require("react"));
 

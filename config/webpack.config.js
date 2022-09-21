@@ -419,7 +419,7 @@ module.exports = function (webpackEnv) {
                     },
                   ],
                 ],
-                
+
                 plugins: [
                   isEnvDevelopment &&
                     shouldUseReactRefresh &&
@@ -453,7 +453,7 @@ module.exports = function (webpackEnv) {
                 cacheDirectory: true,
                 // See #6846 for context on why cacheCompression is disabled
                 cacheCompression: false,
-                
+
                 // Babel sourcemaps are needed for debugging into node_modules
                 // code.  Without the options below, debuggers like VSCode
                 // show incorrect code and set breakpoints on the wrong lines.
@@ -543,6 +543,14 @@ module.exports = function (webpackEnv) {
                 'sass-loader'
               ),
             },
+              {
+                  test: /\.jsx?$/,
+                  loader: 'babel-loader',
+                  exclude: /node_modules/,
+                  query: {
+                      presets: ['es2015']
+                  }
+              },
             // "file" loader makes sure those assets get served by WebpackDevServer.
             // When you `import` an asset, you get its (virtual) filename.
             // In production, they would get copied to the `build` folder.
@@ -561,6 +569,7 @@ module.exports = function (webpackEnv) {
           ],
         },
       ].filter(Boolean),
+
     },
     plugins: [
       // Generates an `index.html` file with the <script> injected.

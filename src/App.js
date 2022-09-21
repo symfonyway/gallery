@@ -1,14 +1,7 @@
 import {useState} from 'react';
 import Gallery from "pet-react-lightbox-gallery";
-import img1 from './lib/images/1.jpg';
-import img2 from './lib/images/2.jpg';
-import img3 from './lib/images/3.jpg';
-import img4 from './lib/images/4.jpg';
-import img5 from './lib/images/5.jpg';
-import img6 from './lib/images/6.jpg';
 
 function App() {
-    const images = [img1, img2, img3, img4, img5, img6];
     const tattoos = [
         'https://i.pinimg.com/564x/be/fb/6c/befb6cc202d1f68d1e3b874438190e33.jpg',
         'https://i.pinimg.com/564x/a2/ae/a5/a2aea50cc7408f1e98b2c97392e9c442.jpg',
@@ -20,7 +13,7 @@ function App() {
     const [currentImages, setCurrentImages] = useState(null);
     return (
         <div>
-            <button onClick={() => setCurrentImages(images)}>Gallery</button>
+            <h1>Testing page</h1>
             <button onClick={() => setCurrentImages(tattoos)}>Tattoos</button>
             <Gallery closeGallery={() => setCurrentImages(null)} images={currentImages}/>
         </div>
