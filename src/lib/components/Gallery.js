@@ -1,4 +1,5 @@
-import {Fragment, useEffect, useState} from 'react';
+import React, {Fragment, useEffect, useState} from 'react';
+import ReactDOM from 'react-dom';
 import NavigationBar from '../organisms/NavigationBar';
 import ExpandGalleryBtn from '../organisms/ExpandGalleryBtn';
 import GalleryTab from '../organisms/GalleryTab';

@@ -5,6 +5,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
+var _reactDom = _interopRequireDefault(require("react-dom"));
+
 var _chevron = _interopRequireDefault(require("../icons/chevron.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -39,12 +43,12 @@ function Chevron(_ref) {
       break;
   }
 
-  return /*#__PURE__*/React.createElement("button", {
+  return /*#__PURE__*/_react.default.createElement("button", {
     onClick: onClick,
     style: direct,
     type: "button",
     className: "gallery__chevron"
-  }, /*#__PURE__*/React.createElement("img", {
+  }, /*#__PURE__*/_react.default.createElement("img", {
     src: _chevron.default,
     alt: "gallery arrow"
   }));

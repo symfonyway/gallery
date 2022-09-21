@@ -5,6 +5,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
+var _reactDom = _interopRequireDefault(require("react-dom"));
+
 var _cross_lightgray = _interopRequireDefault(require("../icons/cross_lightgray.svg"));
 
 var _points = _interopRequireDefault(require("../icons/points.svg"));
@@ -16,14 +20,14 @@ const ExpandGalleryBtn = _ref => {
     isOpen,
     switchAction
   } = _ref;
-  return /*#__PURE__*/React.createElement("button", {
+  return /*#__PURE__*/_react.default.createElement("button", {
     onClick: () => switchAction(!isOpen),
     type: "button",
     className: "gallery__expandGalleryBtn"
-  }, !isOpen && /*#__PURE__*/React.createElement("img", {
+  }, !isOpen && /*#__PURE__*/_react.default.createElement("img", {
     src: _points.default,
     alt: ""
-  }), isOpen && /*#__PURE__*/React.createElement("img", {
+  }), isOpen && /*#__PURE__*/_react.default.createElement("img", {
     src: _cross_lightgray.default,
     alt: ""
   }));

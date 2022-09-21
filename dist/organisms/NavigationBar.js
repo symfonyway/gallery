@@ -7,13 +7,19 @@ exports.default = void 0;
 
 require("core-js/modules/web.dom-collections.iterator.js");
 
-var _react = require("react");
+var _react = _interopRequireWildcard(require("react"));
+
+var _reactDom = _interopRequireDefault(require("react-dom"));
 
 var _Chevron = _interopRequireDefault(require("../molecules/Chevron"));
 
 var _useKeyPress = _interopRequireDefault(require("../hooks/useKeyPress"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function NavigationBar(_ref) {
   let {
@@ -93,19 +99,19 @@ function NavigationBar(_ref) {
       findNearestPositions(images, currImg, true);
     }
   }, [currImg]);
-  return /*#__PURE__*/React.createElement("ul", {
+  return /*#__PURE__*/_react.default.createElement("ul", {
     className: "gallery__navigationBar"
-  }, images.length > 3 && /*#__PURE__*/React.createElement(_Chevron.default, {
+  }, images.length > 3 && /*#__PURE__*/_react.default.createElement(_Chevron.default, {
     onClick: () => switchPictureRight(false),
     direction: "left"
-  }), showedPictures.map((img, index) => /*#__PURE__*/React.createElement("li", {
+  }), showedPictures.map((img, index) => /*#__PURE__*/_react.default.createElement("li", {
     key: index + '-' + img,
     onClick: () => setGlobalCurrentImage(img),
     className: currentIndexImage === index ? '-activeImgInLi' : ''
-  }, /*#__PURE__*/React.createElement("img", {
+  }, /*#__PURE__*/_react.default.createElement("img", {
     src: img,
     alt: ""
-  }))), images.length > 3 && /*#__PURE__*/React.createElement(_Chevron.default, {
+  }))), images.length > 3 && /*#__PURE__*/_react.default.createElement(_Chevron.default, {
     onClick: () => switchPictureRight(true)
   }));
 }

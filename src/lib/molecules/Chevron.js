@@ -1,3 +1,5 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
 import chevron from "../icons/chevron.svg"
 
 function Chevron({direction, onClick}) {

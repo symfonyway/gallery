@@ -1,5 +1,8 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
 import cross from "../icons/cross_lightgray.svg";
 import points from "../icons/points.svg";
+
 
 const ExpandGalleryBtn = ({isOpen, switchAction}) => {
 
