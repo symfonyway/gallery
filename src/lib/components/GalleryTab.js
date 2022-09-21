@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 const GalleryTab = ({images, currentImage, setGlobalCurrentImage}) => {
     return (<ul className="gallery__galleryTab">

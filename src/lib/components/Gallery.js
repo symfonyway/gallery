@@ -1,11 +1,8 @@
 import React, {Fragment, useEffect, useState} from 'react';
-import ReactDOM from 'react-dom';
-import NavigationBar from '../organisms/NavigationBar';
-import ExpandGalleryBtn from '../organisms/ExpandGalleryBtn';
-import GalleryTab from '../organisms/GalleryTab';
+import NavigationBar from './NavigationBar';
+import ExpandGalleryBtn from './ExpandGalleryBtn';
+import GalleryTab from './GalleryTab';
 import cross from "../icons/cross_lightgray.svg";
-
-import "../styles/gallery.scss"
 
 function Gallery({images, closeGallery}) {
     const [currentImage, setGlobalCurrentImage] = useState(images ? images[0] : null);

@@ -9,9 +9,7 @@ require("core-js/modules/web.dom-collections.iterator.js");
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _reactDom = _interopRequireDefault(require("react-dom"));
-
-var _Chevron = _interopRequireDefault(require("../molecules/Chevron"));
+var _Chevron = _interopRequireDefault(require("./Chevron"));
 
 var _useKeyPress = _interopRequireDefault(require("../hooks/useKeyPress"));
 

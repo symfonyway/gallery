@@ -9,17 +9,13 @@ require("core-js/modules/web.dom-collections.iterator.js");
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _reactDom = _interopRequireDefault(require("react-dom"));
+var _NavigationBar = _interopRequireDefault(require("./NavigationBar"));
 
-var _NavigationBar = _interopRequireDefault(require("../organisms/NavigationBar"));
+var _ExpandGalleryBtn = _interopRequireDefault(require("./ExpandGalleryBtn"));
 
-var _ExpandGalleryBtn = _interopRequireDefault(require("../organisms/ExpandGalleryBtn"));
-
-var _GalleryTab = _interopRequireDefault(require("../organisms/GalleryTab"));
+var _GalleryTab = _interopRequireDefault(require("./GalleryTab"));
 
 var _cross_lightgray = _interopRequireDefault(require("../icons/cross_lightgray.svg"));
-
-require("../styles/gallery.scss");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

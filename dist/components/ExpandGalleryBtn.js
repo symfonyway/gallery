@@ -7,8 +7,6 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _reactDom = _interopRequireDefault(require("react-dom"));
-
 var _cross_lightgray = _interopRequireDefault(require("../icons/cross_lightgray.svg"));
 
 var _points = _interopRequireDefault(require("../icons/points.svg"));

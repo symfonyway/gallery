@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import ReactDOM from 'react-dom';
-import Chevron from '../molecules/Chevron';
+import Chevron from './Chevron';
 import useKeyPress from '../hooks/useKeyPress';
 
 function NavigationBar({currImg, images, setGlobalCurrentImage}) {

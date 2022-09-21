@@ -1,6 +1,6 @@
 {
   "name": "pet-react-lightbox-gallery",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "private": false,
   "author": "Artur Yesipov",
   "description": "Just react lite lightbox gallery component",
@@ -19,7 +19,6 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
-    "pet-react-lightbox-gallery": "^0.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",

@@ -5,11 +5,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _chevron = _interopRequireDefault(require("../icons/chevron.svg"));
+
 var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
-
-var _chevron = _interopRequireDefault(require("../icons/chevron.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
