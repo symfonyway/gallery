@@ -26,7 +26,8 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 function Gallery(_ref) {
   let {
     images,
-    closeGallery
+    closeGallery,
+    className
   } = _ref;
   const [currentImage, setGlobalCurrentImage] = (0, _react.useState)(images ? images[0] : null);
   const [isOpenTab, setIsOpenTab] = (0, _react.useState)(false);
@@ -34,7 +35,7 @@ function Gallery(_ref) {
     setGlobalCurrentImage(images ? images[0] : null);
   }, [images]);
   return /*#__PURE__*/_react.default.createElement(_react.Fragment, null, images !== null && /*#__PURE__*/_react.default.createElement("div", {
-    className: "gallery"
+    className: "gallery ".concat(className)
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "gallery__mainWindow"
   }, /*#__PURE__*/_react.default.createElement("div", {

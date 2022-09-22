@@ -1,20 +1,24 @@
 # Simple react gallery component
 ## Description
+This instructions are for projects are made with a create-react-app utility. \
 This component helps users for viewing pictures.\
 It makes a lightbox with simple navigation menu and expandable panel with pictures.
 
 Steps: \
-1.[Using](#using) \
-2.[Editing](#editing)
+1.[installing](#installing) \
+2.[Using](#using)
 
 <a id="installing"></a>
 ## Installing
 <a id="using"></a>
+In your project install the packet with npm command: \
+npm i pet-react-lightbox-gallery
 ## Using
-This component don't use additional external dependencies, \
-you just need to import component from /components/Gallery, \
+
+You just need to import component from /components/Gallery, \
 use this component in your code. \
-Add and fulfill "images" and "closeGallery" props into component and you will see the work of component.
+Add and fulfill "images" and "closeGallery" props into component and you will see the work of component.\
+If you want to expand styles of the component just use prop className with your custom class and modify elements of component.
 
 ### Props
 #### images
@@ -26,11 +30,24 @@ Null is value for switching off component.
 #### closeGallery
 It is function heeds to clean array of images, set null to the array of images.
 
+#### className
+This is prop for expand class list of the parent div of the component.
+The main classes of parts of the component:\
+gallery\
+gallery__mainWindow\
+gallery__mainPicture\
+gallery__navigationBar\
+gallery__chevron\
+gallery__expandGalleryBtn\
+gallery__expandGalleryBtn_close\
+gallery__galleryTab
+
+
 ### Example of using
 
 ```
 import {useState} from 'react';
-import Gallery from "./components/Gallery";
+import Gallery from "pet-react-lightbox-gallery";
 import img1 from './1.jpg';
 import img2 from './2.jpg';
 import img3 from './3.jpg';
@@ -60,9 +77,3 @@ function App() {
 
 export default App;
 ```
-
-<a id="editing"></a>
-## Editing styles
-If you want edit some styles into this component, you can make changes into styles/gallery.scss \
-all local components are taking place into .gallery context for the encapsulation of styles.
-

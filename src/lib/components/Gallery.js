@@ -4,7 +4,7 @@ import ExpandGalleryBtn from './ExpandGalleryBtn';
 import GalleryTab from './GalleryTab';
 import cross from "../icons/cross_lightgray.svg";
 
-function Gallery({images, closeGallery}) {
+function Gallery({images, closeGallery, className}) {
     const [currentImage, setGlobalCurrentImage] = useState(images ? images[0] : null);
     const [isOpenTab, setIsOpenTab] = useState(false);
 
@@ -14,7 +14,7 @@ function Gallery({images, closeGallery}) {
 
     return (
         <Fragment>
-            {images !== null && <div className="gallery">
+            {images !== null && <div className={`gallery ${className}`}>
                 <div className="gallery__mainWindow">
                     <div
                         className="gallery__mainPicture"
